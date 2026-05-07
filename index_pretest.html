@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบก่อนเรียน</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-home">
+    <div class="sky-glow sky-glow-left"></div>
+    <div class="sky-glow sky-glow-right"></div>
+    <div class="sparkles" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <section class="hero-card">
+      <header class="top-banner">
+        <div class="school-badge">
+           <div class="badge-inner">
+            <img src="school-logo.png" alt="ตราโรงเรียนวัดเลียบ">
+          </div>
+          <span>โรงเรียนวัดเลียบ</span>
+        </div>
+        <div class="wood-sign">โรงเรียนวัดเลียบ</div>
+      </header>
+
+      <div class="ribbon ribbon-left">
+        <div class="trophy">🏆</div>
+        <span>เก่งมาก!</span>
+      </div>
+
+      <div class="ribbon ribbon-right">
+        <div class="target">🎯</div>
+        <span>สู้ๆ นะ!</span>
+      </div>
+
+      <div class="character character-boy">
+        <div class="face">
+          <span class="eye eye-left"></span>
+          <span class="eye eye-right"></span>
+          <span class="smile"></span>
+        </div>
+        <div class="body">
+          <div class="book"></div>
+          <div class="pencil"></div>
+        </div>
+      </div>
+
+      <div class="character character-girl">
+        <div class="face">
+          <span class="eye eye-left"></span>
+          <span class="eye eye-right"></span>
+          <span class="smile"></span>
+        </div>
+        <div class="body">
+          <div class="arm"></div>
+          <div class="clipboard"></div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Pre-Test Adventure</p>
+        <h1>
+          <span class="title-top">แบบทดสอบ</span>
+          <span class="title-bottom">ก่อนเรียน</span>
+        </h1>
+        <p class="subtitle">ทดสอบความรู้ พร้อมแล้ว...ไปลุยกันเลย!</p>
+        <button class="start-button" id="startButton" type="button">เริ่มเล่น</button>
+      </div>
+
+      <aside class="tip-board">
+        <div class="pin"></div>
+        <h2>ภารกิจวันนี้</h2>
+        <ul>
+          <li>ทำข้อสอบให้ครบ</li>
+          <li>สะสมดาวแต่ละด่าน</li>
+          <li>ปลดล็อกรางวัลพิเศษ</li>
+        </ul>
+      </aside>
+
+      <aside class="score-board">
+        <div class="clip"></div>
+        <h2>คะแนนของคุณ</h2>
+        <div class="score-row">
+          <span class="star-icon">★</span>
+          <strong id="scoreValue">0</strong>
+        </div>
+        <p id="scoreMessage">เริ่มทำแบบทดสอบเพื่อสะสมดาว</p>
+      </aside>
+
+      <section class="level-track" aria-label="เส้นทางด่าน">
+        <div class="track-line"></div>
+        <button class="level active" data-level="1" type="button">
+          <div class="stars"><span class="filled">★</span><span>★</span><span>★</span></div>
+          <span class="level-number">1</span>
+        </button>
+        <button class="level" data-level="2" type="button">
+          <div class="stars"><span class="filled">★</span><span class="filled">★</span><span>★</span></div>
+          <span class="level-number">2</span>
+        </button>
+        <button class="level" data-level="3" type="button">
+          <div class="stars"><span class="filled">★</span><span class="filled">★</span><span class="filled">★</span></div>
+          <span class="level-number">3</span>
+        </button>
+        <button class="level" data-level="4" type="button">
+          <div class="stars"><span class="filled">★</span><span>★</span><span>★</span></div>
+          <span class="level-number">4</span>
+        </button>
+        <button class="level" data-level="5" type="button">
+          <div class="stars"><span>★</span><span>★</span><span>★</span></div>
+          <span class="level-number">5</span>
+        </button>
+      </section>
+
+      <nav class="subject-bar" aria-label="รายวิชาหลัก">
+        <button class="subject-pill selected" data-subject="ภาษาไทย" type="button">
+          <span class="subject-icon green">📖</span>
+          <span>ภาษาไทย</span>
+        </button>
+        <button class="subject-pill" data-subject="คณิตศาสตร์" type="button">
+          <span class="subject-icon orange">2+2</span>
+          <span>คณิตศาสตร์</span>
+        </button>
+        <button class="subject-pill" data-subject="วิทยาศาสตร์" type="button">
+          <span class="subject-icon blue">🧪</span>
+          <span>วิทยาศาสตร์</span>
+        </button>
+        <button class="subject-pill" data-subject="สังคมศึกษา" type="button">
+          <span class="subject-icon pink">🏛</span>
+          <span>สังคมศึกษา</span>
+        </button>
+        <button class="subject-pill" data-subject="ภาษาอังกฤษ" type="button">
+          <span class="subject-icon purple">ABC</span>
+          <span>ภาษาอังกฤษ</span>
+        </button>
+      </nav>
+
+      <div class="bottom-chests" aria-hidden="true">
+        <div class="chest chest-left"></div>
+        <div class="chest chest-right"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
