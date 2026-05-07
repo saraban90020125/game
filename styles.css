@@ -43,7 +43,7 @@ button {
 .game-home {
   position: relative;
   min-height: 100vh;
-  padding: 24px;
+  padding: 0;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -108,14 +108,14 @@ button {
 
 .hero-card {
   position: relative;
-  width: min(calc(100vw - 48px), calc((100vh - 48px) * 16 / 9));
-  height: min(calc(100vh - 48px), calc((100vw - 48px) * 9 / 16));
-  max-width: 1920px;
-  max-height: 1080px;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  max-width: 1760px;
+  max-height: 990px;
   margin: 0 auto;
-  padding: 10px 20px 14px;
+  padding: 8px 18px 12px;
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 260px;
+  grid-template-columns: 230px minmax(0, 1fr) 230px;
   grid-template-rows: auto 1fr auto auto;
   gap: 8px;
   overflow: hidden;
@@ -158,8 +158,9 @@ button {
 .badge-inner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  padding: 4px;
 }
 
 .school-badge span {
@@ -167,14 +168,14 @@ button {
 }
 
 .wood-sign {
-  min-width: 500px;
-  padding: 18px 30px;
+  min-width: 460px;
+  padding: 16px 26px;
   border-radius: 26px;
   background:
     linear-gradient(180deg, #a86731 0%, #8f5527 48%, #74401e 100%);
   box-shadow: inset 0 0 0 4px rgba(104, 56, 21, 0.5), 0 14px 28px rgba(88, 42, 10, 0.3);
   font-family: "Arial Rounded MT Bold", "Leelawadee UI", sans-serif;
-  font-size: clamp(2.3rem, 3.6vw, 3.8rem);
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
   font-weight: 800;
   letter-spacing: 0.02em;
   text-align: center;
@@ -220,7 +221,7 @@ button {
   grid-row: 2;
   align-self: center;
   justify-self: center;
-  width: min(100%, 760px);
+  width: min(100%, 700px);
   text-align: center;
   z-index: 3;
 }
@@ -260,12 +261,12 @@ h1 {
 }
 
 .title-top {
-  font-size: clamp(3.5rem, 8.5vw, 7.6rem);
+  font-size: clamp(3.1rem, 7.4vw, 6.5rem);
   color: var(--gold);
 }
 
 .title-bottom {
-  font-size: clamp(3.1rem, 7.2vw, 6.5rem);
+  font-size: clamp(2.7rem, 6.2vw, 5.7rem);
   color: var(--pink);
 }
 
@@ -276,20 +277,20 @@ h1 {
   padding: 9px 18px;
   border-radius: 999px;
   background: rgba(7, 75, 154, 0.92);
-  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  font-size: clamp(0.95rem, 1.35vw, 1.45rem);
   font-weight: 700;
   box-shadow: var(--shadow);
 }
 
 .start-button {
   position: relative;
-  padding: 20px 68px;
+  padding: 18px 58px;
   border-radius: 34px;
   background:
     linear-gradient(180deg, #ffe762 0%, #ffca18 45%, #ffb406 100%);
   color: #8c4310;
   font-family: "Arial Rounded MT Bold", "Leelawadee UI", sans-serif;
-  font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+  font-size: clamp(1.95rem, 3.2vw, 3.2rem);
   font-weight: 800;
   box-shadow:
     0 0 0 8px rgba(255, 255, 255, 0.88),
@@ -320,8 +321,8 @@ h1 {
 .score-board {
   position: relative;
   align-self: end;
-  min-height: 190px;
-  padding: 22px 20px 20px;
+  min-height: 174px;
+  padding: 20px 18px 18px;
   border-radius: 24px;
   background: linear-gradient(180deg, #fff8e6 0%, #f9e5bf 100%);
   box-shadow: 0 18px 35px rgba(117, 81, 31, 0.22);
@@ -333,14 +334,14 @@ h1 {
   grid-column: 1;
   grid-row: 2;
   align-self: center;
-  transform: translateY(58px) rotate(-3deg);
+  transform: translateY(48px) rotate(-3deg);
 }
 
 .score-board {
   grid-column: 3;
   grid-row: 2;
   align-self: center;
-  transform: translateY(58px) rotate(3deg);
+  transform: translateY(48px) rotate(3deg);
 }
 
 .pin,
@@ -397,9 +398,9 @@ h1 {
 
 .character {
   position: absolute;
-  bottom: 156px;
+  bottom: 138px;
   z-index: 2;
-  transform: scale(0.88);
+  transform: scale(0.8);
   transform-origin: bottom center;
 }
 
@@ -552,14 +553,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: clamp(8px, 2vw, 24px);
+  gap: clamp(6px, 1.6vw, 18px);
   padding: 0;
   z-index: 3;
 }
 
 .track-line {
   position: absolute;
-  bottom: 32px;
+  bottom: 28px;
   left: 14%;
   right: 14%;
   height: 8px;
@@ -571,7 +572,7 @@ h1 {
 
 .level {
   position: relative;
-  width: clamp(90px, 8vw, 112px);
+  width: clamp(82px, 7vw, 100px);
   background: none;
   color: var(--white);
 }
@@ -581,7 +582,7 @@ h1 {
   justify-content: center;
   gap: 2px;
   margin-bottom: 4px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #efe7d8;
   text-shadow: 0 4px 0 rgba(131, 113, 86, 0.35);
 }
@@ -593,13 +594,13 @@ h1 {
 .level-number {
   display: grid;
   place-items: center;
-  width: 68px;
-  height: 68px;
+  width: 62px;
+  height: 62px;
   margin: 0 auto;
   border-radius: 50%;
   border: 6px solid #ffffff;
   font-family: "Arial Rounded MT Bold", "Leelawadee UI", sans-serif;
-  font-size: 2.35rem;
+  font-size: 2rem;
   font-weight: 800;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
@@ -619,11 +620,11 @@ h1 {
   grid-row: 4;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  width: min(100%, 1760px);
+  width: min(100%, 1640px);
   justify-self: center;
   align-self: end;
-  gap: 8px;
-  padding: 10px;
+  gap: 6px;
+  padding: 8px;
   border-radius: 22px;
   background: linear-gradient(180deg, #9a622d 0%, #75431d 100%);
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.12), 0 18px 32px rgba(82, 49, 21, 0.3);
@@ -633,13 +634,13 @@ h1 {
 .subject-pill {
   display: flex;
   align-items: center;
-  gap: 10px;
-  min-height: 62px;
-  padding: 10px 12px;
-  border-radius: 18px;
+  gap: 8px;
+  min-height: 56px;
+  padding: 8px 10px;
+  border-radius: 16px;
   background: linear-gradient(180deg, rgba(255, 232, 198, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%);
   color: #fff8ed;
-  font-size: 1.08rem;
+  font-size: 0.96rem;
   font-weight: 700;
   transition: transform 180ms ease, background 180ms ease;
 }
@@ -655,13 +656,13 @@ h1 {
 .subject-icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   flex-shrink: 0;
   color: white;
   font-family: "Arial Rounded MT Bold", "Leelawadee UI", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 800;
   box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.15);
 }
@@ -734,7 +735,7 @@ h1 {
 
 @media (max-width: 1200px) {
   .game-home {
-    padding: 14px;
+    padding: 0;
   }
 
   .hero-card {
@@ -793,7 +794,7 @@ h1 {
 
 @media (max-width: 900px) {
   .game-home {
-    padding: 14px;
+    padding: 0;
   }
 
   .wood-sign {
@@ -947,7 +948,7 @@ h1 {
 
 @media (max-width: 932px) and (orientation: landscape) {
   .game-home {
-    padding: 10px;
+    padding: 0;
   }
 
   .hero-card {
